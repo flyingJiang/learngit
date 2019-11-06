@@ -44,3 +44,43 @@ $ git checkout -- readme.txt
 //Git同样告诉我们，用命令git reset HEAD <file>可以把暂存区的修改撤销掉（unstage），重新放回工作区：
 
 $ rm test.txt
+$ ssh-keygen -t rsa -C "Flying.Jiang@homecredit.cn"
+
+$ git remote add origin git@github.com:flyingJiang/learngit.git
+//git@github.com:michaelliao/learngit.git
+//git@github.com:flyingJiang/learngit.git
+$ git push -u origin master
+//由于远程库是空的，我们第一次推送master分支时，加上了-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令。
+$ git push origin master
+
+$ git clone git@github.com:flyingJiang/gitskills.git
+git remote add gitskillsorigin git@github.com:flyingJiang/gitskills.git
+git push -u gitskillsorigin master
+git push gitskillsorigin master
+$ git checkout -b dev
+$ git branch dev
+$ git checkout dev
+$ git branch
+$ git checkout master
+
+$ git merge dev
+$ git branch -d dev
+$ git branch
+
+$ git switch -c dev
+$ git switch master
+
+$ git log --graph --pretty=oneline --abbrev-commit
+
+$ git merge --no-ff -m "merge with no-ff" dev
+$ git stash
+
+$ git stash list
+
+$ git merge --no-ff -m "merged bug fix 101" issue-01
+$ git stash pop
+
+$ git stash apply stash@{0}
+$ git cherry-pick 4c805e2
+
+$ git tag -a v0.1 -m "version 0.1 released" 1094adb
