@@ -57,8 +57,11 @@ $ git push origin master
 $ git clone git@github.com:flyingJiang/gitskills.git
 git remote add gitskillsorigin git@github.com:flyingJiang/gitskills.git
 //git remote add originInter git@github.com:flyingJiang/Test4Interface.git
-git push -u gitskillsorigin master
-//git push -u originInter master
+//git remote add origin3 git@github.com:flyingJiang/Test2Inteface.git
+/// git remote add origin git@github.com:flyingJiang/SpringBoot4Oracle.git
+
+git push -u origin master
+//git push -u origin3 master
 git push gitskillsorigin master
 $ git checkout -b dev
 $ git branch dev
@@ -87,3 +90,9 @@ $ git stash apply stash@{0}
 $ git cherry-pick 4c805e2
 
 $ git tag -a v0.1 -m "version 0.1 released" 1094adb
+
+touch .gitignore
+#要想.gitignore生效，必须得提交，输入命令：
+git add .gitignore
+git commit .gitignore -m "首先提交.gitignore文件"
+
